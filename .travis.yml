@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
 script:
-  - npm run lint
-  - npm test
-  - npm run build
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  api_key:
+    secure: qhPCtn4TFmtr39FSrdnUiV2+PICMRMfecVPkXgmMwfGJQyRoAmd/kn2ummcdeu8D6OwVseFc3cMdVaygAydRBUjoH9j8vXMoSNAuUI2pJkdCtA/cKlbMBUhht22k+ocBoZ2j24Xh4Jw5KTeozT/TD4JOKAskV/lSw68hqV5osjy+aBOqFO/q8AIakaxemvEpt4rSV6N9nIGJ3ZGyZzLGiZd9wvGpgz8rgUUSAy80FJCxNLzId8kLJyscDyJChJcMVfolimvkWj+XuRqPKkM8Vs2dElRBi1AtGDmcUFk/XYD9BcNt5cm3qK3cywZwWVMGhoBDQjiSyGtRsmoLlzcYbInMFs+CVCq5e1cIgMC7bVsEziP5OxN+AZ1k3iIVwSZYaYCvD1e8ha4fB3qTM8pBFnOSaSbMGqn63McXyD/9KW809G75n1cUCClEAtD170IhfBjbK4UgxpippCw5GTkHQ1++YZME8z0MQ/QbGBEDo5/lIOCIlsZx0H5CI6QetNqEiQnGZyy4VsAdRnkM38wEDjw6n85nhgQ/Fz2NNdrDub6OOT5ik6gFEGvrKsUmP3eiRNhFNZHbRWVXP9xBymwYtowuoojDB+GLpr60JbiDa9VD0LDhpgjkpAOuAHNMGlrbKoVpba+tVmz1PRjkSU+HtRa2JZDf6AKPg6hwF9s+UJc=
+  provider: heroku
+  app: kristine-build-and-deploy
+  skip_cleanup: true
